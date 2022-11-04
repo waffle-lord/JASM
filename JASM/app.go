@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	// "fmt"
+	"fmt"
 
 	// "time"
 	// "github.com/wailsapp/wails/v2/pkg/runtime"
@@ -31,7 +31,12 @@ func (a *App) SetContext(ctx context.Context) {
 }
 
 func (a *App) GetCpuData() *CpuInfo {
+	fmt.Println("Getting CPU data")
+
 	info, _ := cpu.Info()
+
+	fmt.Printf("Model: %s\n", info[0].ModelName)
+	fmt.Printf("Cores: %v\n", info[0].Cores)
 
 	return &CpuInfo{
 		Model:     info[0].ModelName,

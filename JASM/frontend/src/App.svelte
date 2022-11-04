@@ -1,14 +1,13 @@
 <script>
-  import { GetCpuData } from "../wailsjs/go/main/App.js";
+  import { GetCpuData } from "../wailsjs/go/main/App";
   
-  let message = "No data to display";
-  let data;
+  let message = "Nothing to display"
 
   function getData() {
-    GetCpuData().then((result) => (data = result));
-    message = `Model: ${data.Model} Core Count: ${data.CoreCount}`;
+    GetCpuData().then((data) => (message = `Model: ${data.Model} -- Cores: ${data.CoreCount}`));
   }
-</script>
+  </script>
 
 <p>{message}</p>
+
 <button on:click={getData}>Get Cpu Data</button>
