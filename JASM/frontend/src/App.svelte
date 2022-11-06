@@ -2,13 +2,13 @@
   import { onMount } from "svelte";
   import { GetCpuData } from "../wailsjs/go/main/App";
   import { EventsOn } from "../wailsjs/runtime";
-  
+
   let dataReady = false;
   let cpuInfo = "N/A";
   let coreLoads = [];
   let totalLoad;
 
-  // 
+  //
   function precision(a) {
     if (!isFinite(a)) return 0;
     var e = 1, p = 0;
@@ -20,9 +20,9 @@
       let data = await GetCpuData();
 
       cpuInfo = `${data.Model} | Cores Count: ${data.CoreCount}`;
-      
+
       totalLoad = precision(data.TotalLoad);
-      
+
       coreLoads = data.CoreLoads;
   }
 
