@@ -22,8 +22,9 @@ func main() {
 		Height:           768,
 		Assets:           assets,
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		OnStartup: func(ctx context.Context) {
+		OnDomReady: func(ctx context.Context) {
 			app.SetContext(ctx)
+			app.StartTimer()
 		},
 		Bind: []interface{}{
 			app,

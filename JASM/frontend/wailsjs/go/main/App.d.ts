@@ -6,3 +6,7 @@ import {context} from '../models';
 export function GetCpuData():Promise<main.CpuInfo>;
 
 export function SetContext(arg1:context.Context):Promise<void>;
+
+export function StartTimer():Promise<void>;
+
+export function StopTimer():Promise<void>;
