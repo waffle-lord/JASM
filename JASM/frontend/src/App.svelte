@@ -10,7 +10,7 @@
   let coreLoads = [];
   let totalLoad;
 
-  //
+  // round decimals to the 10ths position
   function precision(a) {
     if (!isFinite(a)) return 0;
     var e = 1,
