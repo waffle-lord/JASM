@@ -9,3 +9,11 @@ export function GetCpuData() {
 export function SetContext(arg1) {
   return window['go']['main']['App']['SetContext'](arg1);
 }
+
+export function StartTimer() {
+  return window['go']['main']['App']['StartTimer']();
+}
+
+export function StopTimer() {
+  return window['go']['main']['App']['StopTimer']();
+}
