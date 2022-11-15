@@ -1,4 +1,5 @@
 **/node_modules/
 
 **/build/
-**/frontend/dist
+**/frontend/dist/
+**/frontend/wailsjs/go/
